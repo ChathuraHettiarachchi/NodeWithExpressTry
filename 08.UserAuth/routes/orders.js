@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
+const checkAuth = require('../auth/check-auth');
 
 const Order = require("../models/orders");
 const Product = require("../models/products");
@@ -35,7 +36,7 @@ router.get("/", (req, res, next) => {
         });
 });
 
-router.post("/", (req, res, next) => {
+router.post("/", checkAuth, (req, res, next) => {
     Product.findById(req.body.productId)
         .then(product => {
             if (!product) {
@@ -98,8 +99,8 @@ router.get("/:orderId", (req, res, next) => {
         });
 });
 
-router.delete("/:orderId", (req, res, next) => {
-    Order.remove({ _id: req.params.orderId })
+router.delete("/:orderId", checkAuth, (req, res, next) => {
+    Order.remove({_id: req.params.orderId})
         .exec()
         .then(result => {
             res.status(200).json({
@@ -107,7 +108,7 @@ router.delete("/:orderId", (req, res, next) => {
                 request: {
                     type: "POST",
                     url: "http://localhost:3000/orders",
-                    body: { productId: "ID", quantity: "Number" }
+                    body: {productId: "ID", quantity: "Number"}
                 }
             });
         })
