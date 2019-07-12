@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05faf7f-b93f-4347-8dcf-4caa0ed8eed8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../01.First API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01.First API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03.CrossOriginSecurity/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../03.CrossOriginSecurity/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03.CrossOriginSecurity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03.CrossOriginSecurity/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
